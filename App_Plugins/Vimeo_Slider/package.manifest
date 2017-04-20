@@ -1,0 +1,18 @@
+﻿{
+  "propertyEditors": [
+    {
+      "id": "90a90413-7fd3-4415-98a1-2c063d915fb7",
+      "alias": "%SolutionName%.VimeoSlider",
+      "name": "Vimeo Slider",
+      "valueType": "JSON",
+      "editor": {
+        "view": "~/App_Plugins/Vimeo_Slider/vimeo-slider.html",
+        "valueType": "JSON"
+      }
+    }
+  ],
+  "javascript": [
+    "/App_Plugins/Vimeo_Slider/VimeoSliderController.js",
+    "/App_Plugins/Vimeo_Slider/vimeoSliderDirective.js"
+  ]
+}

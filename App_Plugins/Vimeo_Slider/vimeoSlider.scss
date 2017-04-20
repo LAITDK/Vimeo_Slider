@@ -1,0 +1,167 @@
+﻿@import 'Mixins.scss';
+
+
+.box-wrapper {
+    width: 100%;
+    /*min-height: 100px;*/
+    overflow: hidden;
+
+    h4, h3, h2, p {
+        display: block;
+        width: 200px;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    input[type="text"] {
+        border: none;
+        font-size: 14px;
+        margin: 0;
+        outline: 0;
+        padding: 20px;
+        width: 90%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-shadow: 0 0 1px black;
+        box-shadow: 0 0 1px black;
+        margin: 5px auto;
+        display: block;
+    }
+
+    textarea {
+        border: none;
+        font-size: 14px;
+        width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-shadow: 0 0 1px black;
+        box-shadow: 0 0 1px black;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .vimeo-image-thumbnail {
+        width: 40%;
+        float: left;
+    }
+
+    .vimeo-image-select {
+        width: 60%;
+        float: left;
+    }
+}
+
+.vimeo-image {
+    img {
+        width: 50%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .grid-vimeo {
+        position: relative;
+
+        .grid-vimeo-icon {
+            @include center;
+            width: 90px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.vimeo-bottom {
+    width: 100%;
+
+    .vimeo-warning {
+        background-color: darkorange;
+        padding: 5px 20px;
+        margin: 10px auto;
+        display: block;
+        width: 150px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+    }
+}
+
+.vimeo-slider-thumbnail {
+    width: 20%;
+    float: left;
+    margin: 20px;
+
+    ul li {
+        border: none;
+    }
+}
+
+.umb-mediapicker .umb-sortable-thumbnails li {
+    margin: 0 auto;
+}
+
+.Vimeo-Slider-Items {
+    width: 75%;
+    float: left;
+    margin-left: 0;
+    min-height: 100px;
+    max-height: 305px;
+    overflow-y: scroll;
+
+    li {
+        list-style: none;
+        min-width: 300px;
+        overflow: hidden;
+        border: 1px solid black;
+        margin: 10px 0;
+        /*img {
+            float: left;
+        }*/
+        .vimeo_text {
+            width:55%;
+            float:left;
+            p {
+                width:100%;
+            }
+        }
+
+        .vimeo_actions {
+            width:12%;
+            float:left;
+            .edit-btn, .delete-box, .handle {
+                margin:0 10px;
+                padding:8px 30px;
+                background: none;
+                border: none;
+                font-size: 20px;
+            }
+        }
+
+        .vimeo-image {
+            float: left;
+            width:33%;
+            img {
+                width: 50%;
+                margin: 0px auto;
+                display: block;
+            }
+
+            .grid-vimeo {
+                position: relative;
+
+                .grid-vimeo-icon {
+                    @include center;
+                    width: 90px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

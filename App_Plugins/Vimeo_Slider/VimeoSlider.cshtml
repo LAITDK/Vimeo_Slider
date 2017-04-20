@@ -1,0 +1,69 @@
+﻿@using System.Web.Mvc
+@using System.Web.WebPages.Razor
+@using System.Web.Mvc.Html
+
+@inherits %SolutionName%.UmbracoViewPage<dynamic>
+@{
+    var id = Guid.NewGuid();
+}
+
+@if (Model.value != null)
+{
+    <div class="row vimeo_slider" data-vimeo="player">
+        <div class="col-md-8 col-sm-12 vimeo_main">
+            <div class="vimeo_video">
+                <div class="grid-vimeo" >
+                    <div data-vimeo="video" class="vimeo_main_video" data-vimeo-defer></div><!--vimeo player-->
+                    <div data-vimeo="overlay" class="vimeo_overlay" style=" background-size:cover; background-position:center center; background-repeat:no-repeat; " >
+                        <label for="vimeoCheckbox"><img src="/Content/Images/Icons/play_icon_white.png" /></label>
+                        <input data-vimeo="checkbox" id="vimeoCheckbox" type="checkbox" style="display:none;" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--playlist with videos.-->
+        <div class="col-md-4 col-sm-12 vimeo_playlist">
+            <div class="vimeo_viewport">
+                <!--limit the view overflow:hidden-->
+                <div class="vimeo_playlist_list" data-vimeo-playlist="list">
+                    <!--contains the list-->
+                    @foreach (var item in Model.value)
+                    {
+                        <a href="#" class="vimeo_item_link" type="button" data-vimeo-slider-url="@item.VimeoUrl">
+                            <div class="vimeo_playlist_item">
+                                <div class="playlist_item_left">
+                                    <div class="grid-vimeo">
+                                        <img src="@Html.Action("GetImageUrl", "VideoSurface", new { mediaId = item.ImageId })?width=150&height=100" />
+                                        <div class="grid-vimeo-icon">
+                                            <img src="../../Content/Images/Icons/play_icon_white.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlist_item_right">
+                                    @if(item.Title != null && item.Title != string.Empty) { 
+                                    <p>@item.Title</p>
+                                    }
+                                    <p><small><span data-vimeo="length"></span></small></p>
+
+                                    <div data-vimeo-image="@item.ImageUrl"></div>
+                                    <div data-vimeo-title="@item.Title"></div>
+                                    <div data-vimeo-descr="@item.Descr"></div>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" data-vimeo="content">
+        <div class="col-md-8 col-sm-12">
+            <h2 style="color:#F67129;" class="text-center" data-vimeo="headline"></h2>
+            <p data-vimeo="descr"></p>
+        </div>
+        <div class="col-md-4 col-sm-12"></div>
+    </div>
+
+}

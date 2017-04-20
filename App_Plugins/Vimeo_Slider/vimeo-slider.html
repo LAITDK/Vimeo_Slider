@@ -1,0 +1,51 @@
+﻿<!--
+//-----------------------------------------------------------------------------------------------------------------------------
+//  Vimeo Slider code below
+//-----------------------------------------------------------------------------------------------------------------------------
+-->
+
+<div data-ng-controller="VimeoSliderController">
+    <umb-overlay ng-if="overlay.show" model="overlay" view="overlay.view" position="right"></umb-overlay>
+
+    <!-- add new here-->
+    <div class="box-wrapper">
+        <h2>Vimeo Slider</h2>
+    </div>
+    <div class="box-wrapper">
+
+        <div class="vimeo-slider-thumbnail">
+            <p>Tilføj Video</p>
+            <div class="umb-editor umb-mediapicker ng-scope">
+                <ul class="umb-sortable-thumbnails ng-scope">
+                    <li>
+                        <a class="add-link" href="" ng-click="openOverlay(null)"><i class="icon icon-add large"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--display added videos on list-->
+        <ul ui-sortable="sortableOptions" class="Vimeo-Slider-Items" ng-model="control.value">
+            <li ng-repeat="item in control.value ">
+                <div class="vimeo-image">
+                    <div class="grid-vimeo">
+                        
+                        <img src="{{item.ImageUrl}}?height=150" />
+                        <div class="grid-vimeo-icon">
+                            <img src="../../Content/Images/Icons/play_icon_white.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="vimeo_text">
+                    <p>{{item.Title}}</p>
+                    <p>{{item.Descr}}</p>
+                </div>
+                <div class="vimeo_actions">
+                    <button class="edit-btn" type="button" ng-click="openOverlay(item)"><span class="icon icon-edit"></span></button>
+                    <button class="btn delete-box" type="button" ng-click="removeItem($index)"><span class="icon icon-delete"></span></button>
+                    <i class="icon icon-navigation handle"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

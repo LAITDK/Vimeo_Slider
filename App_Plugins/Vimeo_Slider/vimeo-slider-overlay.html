@@ -1,0 +1,44 @@
+﻿<div>
+    <div class="box-wrapper">
+        <div ng-if="!model.control.ImageUrl">
+            <h4>Tilføj Thumbnail</h4>
+        </div>
+        <div ng-if="model.control.ImageUrl">
+            <h4>Rediger thumbnail</h4>
+        </div>
+
+        <div class="vimeo-start-bottom">
+            <div class="umb-editor umb-mediapicker ng-scope">
+                <ul class="umb-sortable-thumbnails ng-scope">
+                    <li>
+                        <a class="add-link" href="" ng-click="model.openMediaPicker()" prevent-default><i class="icon icon-add large"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="vimeo-image">
+            <div class="grid-vimeo" data-ng-if="model.control.ImageUrl">
+                <img src="" ng-src="{{model.control.ImageUrl}}" />
+                <div class="grid-vimeo-icon">
+                    <img src="../../Content/Images/Icons/play_icon_white.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-wrapper">
+        <h3>Tilføj Overskrift <br /></h3>
+        <input type="text" placeholder="Overskrift til Video" ng-model="model.control.Title" >
+    </div>
+    <div class="box-wrapper">
+        <h3>Beskrivelse</h3>
+        <textarea type="text" cols="10" rows="10" placeholder="Beskrivelse til videoen" ng-model="model.control.Descr"></textarea> 
+    </div>
+
+    <div class="box-wrapper">
+        <h3>Tilføj Url <br /></h3>
+        <input type="text" placeholder="Url fra vimeo her." ng-model="model.control.VimeoUrl" >
+    </div>
+
+</div>
