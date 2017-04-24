@@ -2,7 +2,7 @@
 @using System.Web.WebPages.Razor
 @using System.Web.Mvc.Html
 
-@inherits %SolutionName%.UmbracoViewPage<dynamic>
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
 @{
     var id = Guid.NewGuid();
 }
@@ -12,15 +12,14 @@
     <div class="row vimeo_slider" data-vimeo="player">
         <div class="col-md-8 col-sm-12 vimeo_main">
             <div class="vimeo_video">
-                <div class="grid-vimeo" >
-                    <div data-vimeo="video" class="vimeo_main_video" data-vimeo-defer></div><!--vimeo player-->
-                    <div data-vimeo="overlay" class="vimeo_overlay" style=" background-size:cover; background-position:center center; background-repeat:no-repeat; " >
+                <div class="grid-vimeo custom-grid-vimeo" >
+                    <div data-vimeo="video"  id="videobox" class="vimeo_main_video" data-vimeo-defer></div><!--vimeo player-->
+                    <div data-vimeo="overlay" class="vimeo_overlay" style="background-size:cover; background-position:center center; background-repeat:no-repeat; " >
                         <label for="vimeoCheckbox"><img src="/Content/Images/Icons/play_icon_white.png" /></label>
                         <input data-vimeo="checkbox" id="vimeoCheckbox" type="checkbox" style="display:none;" />
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!--playlist with videos.-->
@@ -58,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="row" data-vimeo="content">
+    <div class="row vimeo_slider_text" data-vimeo="content">
         <div class="col-md-8 col-sm-12">
             <h2 style="color:#F67129;" class="text-center" data-vimeo="headline"></h2>
             <p data-vimeo="descr"></p>

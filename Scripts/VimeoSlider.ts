@@ -14,6 +14,7 @@ players.each((index, element) => {
         sliderItems = playerElement.find("[data-vimeo-slider-url]");
 
 
+    
     playerElement.on("click", "[data-vimeo-slider-url]", function (e) {
         e.preventDefault();
         StartPlayer($(this), true);
@@ -32,7 +33,8 @@ players.each((index, element) => {
         video.attr("data-vimeo-height", playerWindowHeight);
         player = new Vimeo.Player(videoClone.get(0));
 
-       
+
+
         // show thumbnail, title & descr, of current video playing.
         // find elements
         var videoImageElm = element.find($("[data-vimeo-image]"));

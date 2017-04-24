@@ -11,6 +11,8 @@
         .vimeo_video {
             height: 100%;
             .grid-vimeo{
+                /*height:100%;
+                width:100%;*/
                 height:100%;
                 width:100%;
                 z-index:400;
@@ -104,6 +106,98 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width:990px){
+    .vimeo_slider{
+        height:auto;
+        max-width:670px;
+        .vimeo_main{
+            padding:0;
+            width:100%;
+            .vimeo_video{
+                max-width:660px;
+                .grid-vimeo{
+                    img{
+                        width:auto;
+                    }
+                }
+                .custom-grid-vimeo{
+                    .vimeo_overlay{
+                        label{
+                            -webkit-transform: translateX(-50%) translateY(30%);
+                            transform:translateX(-50%) translateY(100%);
+                        }
+                    }
+                }
+            }
+        }
+        .vimeo_playlist{
+            float:left;
+            margin-left:10px;
+            .vimeo_viewport{
+                height:400px;
+                .vimeo_playlist_list{
+                    .vimeo_playlist_item{
+                        height:105px;
+                    }
+                    .vimeo_item_link{
+                        .playlist_item_left{
+                            width:20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .vimeo_slider_text{
+        width:100%;
+        col-sm-12{
+            padding:0;
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+    
+    
+    .vimeo_slider{
+        .vimeo_main{
+            padding:0;
+            width:100%;
+            .vimeo_video{
+                width:auto;
+                .custom-grid-vimeo{
+                    .vimeo_overlay{
+                        label{
+                            -webkit-transform: translateX(-50%) translateY(30%);
+                            transform:translateX(-50%) translateY(30%);
+                        }
+                    }
+                }
+            }
+        }
+        
+        .vimeo_playlist{
+            float:left;
+            margin-left:10px;
+            .vimeo_viewport{
+                height:300px;
+                .vimeo_playlist_list{
+                    .vimeo_item_link{
+                        .playlist_item_left{
+                            width:36%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .vimeo_slider_text{
+        width:100%;
+        col-sm-12{
+            padding:0;
         }
     }
 }
