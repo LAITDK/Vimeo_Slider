@@ -24,7 +24,6 @@ Install:
 notes::: (Dansk)
  - Overfør filer, til de tilsvarende mapper. 
  - App_Plugins -> Vimeo_Slider -> "package.manifest", tilpas Alias til projekt navn.(%SolutionName%)
- - App_Plugins -> Vimeo_Slider ->"VimeoSlider.cshtml", tilpas name space.  
  - Controller -> "VideoSurfaceController.cs", tilpas namespace samt using. (%SolutionName%) 
 
  - Tilføj flg. links til master page: (tilpas hvis nødvendigt)
@@ -35,7 +34,6 @@ notes::: (Dansk)
  note::: (English)
  - Transfer files, to corresponding folders.
  - App_Plugins -> Vimeo_slider -> "package.manifest", adapt Alias to your project name (%SolutionName%)
- - App_Plugins -> Vimeo_Slider ->"VimeoSlider.cshtml", Adapt name space to your project name (%SolutionName%)
  - Controller -> "VideoSurfaceController.cs", adapt namespace and using. (%SolutionName%)
  - Add the following links to the master page: ( adapt if needed)
 
